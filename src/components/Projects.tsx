@@ -96,7 +96,7 @@ export default function Projects() {
               ))
             : projects.map((project, index) => (
                 <FadeInWhenVisible key={project.name} delay={index * 0.08}>
-                  <ProjectCard project={project} index={index} />
+                  <ProjectCard project={project} />
                 </FadeInWhenVisible>
               ))}
         </div>
