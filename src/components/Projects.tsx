@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
-import { Code, ExternalLink, Clock } from "lucide-react"
+import { GitFork, ExternalLink, Clock } from "lucide-react"
 import FadeInWhenVisible from "@/components/FadeInWhenVisible"
 import { projects, type Project } from "@/lib/data"
 
@@ -24,7 +24,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               className="text-slate-500 hover:text-violet-400 transition-colors"
               aria-label="GitHub"
             >
-              <Code size={16} />
+              <GitFork size={16} />
             </a>
           )}
           {project.live && (
