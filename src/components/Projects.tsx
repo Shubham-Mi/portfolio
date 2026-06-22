@@ -6,7 +6,7 @@ import { projects, type Project } from "@/lib/data"
 
 const PLACEHOLDER_COUNT = 4
 
-function ProjectCard({ project, index }: { project: Project; index: number }) {
+function ProjectCard({ project }: { project: Project }) {
   return (
     <motion.div
       whileHover={{ y: -4 }}

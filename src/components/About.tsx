@@ -1,5 +1,5 @@
 "use client"
-import { useRef } from "react"
+
 import FadeInWhenVisible from "@/components/FadeInWhenVisible"
 import { useCountUp } from "@/lib/useCountUp"
 import { personalInfo, stats } from "@/lib/data"
