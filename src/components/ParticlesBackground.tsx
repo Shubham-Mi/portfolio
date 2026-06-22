@@ -1,18 +1,14 @@
 "use client"
 import { useEffect, useState } from "react"
 import Particles from "@tsparticles/react"
+import { tsParticles } from "@tsparticles/engine"
 import { loadSlim } from "@tsparticles/slim"
-
-// @ts-expect-error - initParticlesEngine is exported but not typed in this version
-import { initParticlesEngine } from "@tsparticles/react"
 
 export default function ParticlesBackground() {
   const [engineReady, setEngineReady] = useState(false)
 
   useEffect(() => {
-    initParticlesEngine(async (engine: any) => {
-      await loadSlim(engine)
-    }).then(() => setEngineReady(true))
+    loadSlim(tsParticles).then(() => setEngineReady(true))
   }, [])
 
   if (!engineReady) return null
