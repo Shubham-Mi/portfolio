@@ -87,7 +87,7 @@ export default function Hero() {
           className="text-xl md:text-2xl text-slate-400 mb-10 font-mono min-h-[2rem] flex items-center gap-1"
         >
           <span className="text-violet-400">{typedText}</span>
-          <span className="inline-block w-0.5 h-6 bg-violet-400 animate-pulse" />
+          <span aria-hidden="true" className="inline-block w-0.5 h-6 bg-violet-400 animate-pulse" />
         </motion.div>
 
         <motion.div

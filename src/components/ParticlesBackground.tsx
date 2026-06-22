@@ -14,9 +14,9 @@ export default function ParticlesBackground() {
   if (!engineReady) return null
 
   return (
+    <div aria-hidden="true" className="absolute inset-0 w-full h-full">
     <Particles
       id="tsparticles"
-      className="absolute inset-0 w-full h-full"
       options={{
         background: { color: { value: "transparent" } },
         fpsLimit: 60,
@@ -55,5 +55,6 @@ export default function ParticlesBackground() {
         detectRetina: true,
       }}
     />
+    </div>
   )
 }
