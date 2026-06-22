@@ -2,8 +2,51 @@
 import { motion } from "framer-motion"
 import { useRef } from "react"
 import { useInView } from "framer-motion"
+import { IconType } from "react-icons"
+import {
+  SiCplusplus,
+  SiPython,
+  SiJavascript,
+  SiSpringboot,
+  SiReact,
+  SiNodedotjs,
+  SiExpress,
+  SiPostgresql,
+  SiMysql,
+  SiRedis,
+  SiDocker,
+  SiKubernetes,
+  SiGit,
+  SiJenkins,
+  SiGitlab,
+  SiGraphql,
+} from "react-icons/si"
+import { FaJava, FaAws } from "react-icons/fa6"
+import { Globe } from "lucide-react"
 import FadeInWhenVisible from "@/components/FadeInWhenVisible"
 import { skillGroups } from "@/lib/data"
+
+const SKILL_ICONS: Record<string, IconType | typeof Globe> = {
+  Java: FaJava,
+  "C++": SiCplusplus,
+  Python: SiPython,
+  JavaScript: SiJavascript,
+  "Spring Boot": SiSpringboot,
+  "React.js": SiReact,
+  "Node.js": SiNodedotjs,
+  "Express.js": SiExpress,
+  PostgreSQL: SiPostgresql,
+  MySQL: SiMysql,
+  Redis: SiRedis,
+  AWS: FaAws,
+  Docker: SiDocker,
+  Kubernetes: SiKubernetes,
+  Git: SiGit,
+  Jenkins: SiJenkins,
+  "GitLab CI": SiGitlab,
+  REST: Globe,
+  GraphQL: SiGraphql,
+}
 
 function SkillCategory({ category, skills, index }: { category: string; skills: string[]; index: number }) {
   const ref = useRef<HTMLDivElement>(null)
@@ -13,17 +56,21 @@ function SkillCategory({ category, skills, index }: { category: string; skills: 
     <div ref={ref} className="space-y-3">
       <p className="font-mono text-xs text-violet-500 tracking-widest uppercase">{category}</p>
       <div className="flex flex-wrap gap-2">
-        {skills.map((skill, i) => (
-          <motion.span
-            key={skill}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.3, delay: index * 0.05 + i * 0.05 }}
-            className="px-3 py-1.5 rounded-md bg-[#111118] border border-[#1e1e2e] text-slate-300 text-sm font-mono hover:border-violet-500/50 hover:text-violet-300 transition-colors duration-200"
-          >
-            {skill}
-          </motion.span>
-        ))}
+        {skills.map((skill, i) => {
+          const Icon = SKILL_ICONS[skill]
+          return (
+            <motion.span
+              key={skill}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3, delay: index * 0.05 + i * 0.05 }}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#111118] border border-[#1e1e2e] text-slate-300 text-sm font-mono hover:border-violet-500/50 hover:text-violet-300 transition-colors duration-200 group"
+            >
+              {Icon && <Icon size={14} className="shrink-0 opacity-70 group-hover:opacity-100 transition-opacity" />}
+              {skill}
+            </motion.span>
+          )
+        })}
       </div>
     </div>
   )
