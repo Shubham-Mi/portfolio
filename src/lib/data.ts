@@ -31,9 +31,12 @@ export interface Project {
   name: string
   description: string
   tags: string[]
+  featured?: boolean      // if true, shown in homepage section (up to 6)
+  slug?: string           // "base-convertor" → /project/base-convertor
+  deploymentUrl?: string  // Vercel origin — used only by next.config.ts for rewrites
+  thumbnail?: string      // "/thumbnails/base-convertor.png" — gradient placeholder if absent
   github?: string
-  live?: string
-  comingSoon?: boolean
+  live?: string           // external link fallback when no slug
 }
 
 export const personalInfo: PersonalInfo = {
@@ -113,4 +116,14 @@ export const experiences: Experience[] = [
   },
 ]
 
-export const projects: Project[] = []
+export const projects: Project[] = [
+  {
+    name: "Base Convertor",
+    description: "Convert numbers between binary, octal, decimal, and hexadecimal with instant results.",
+    tags: ["React", "TypeScript", "Vite", "Vercel"],
+    featured: true,
+    slug: "base-convertor",
+    deploymentUrl: "https://base-convertor-one.vercel.app",
+    github: "https://github.com/Shubham-Mi/base-convertor",
+  },
+]
