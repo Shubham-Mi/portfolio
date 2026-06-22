@@ -1,5 +1,5 @@
 "use client"
-import { GitFork, UserCircle, Mail } from "lucide-react"
+import { GitFork, Link, Mail } from "lucide-react"
 import FadeInWhenVisible from "@/components/FadeInWhenVisible"
 import { personalInfo } from "@/lib/data"
 
@@ -12,7 +12,7 @@ const socialLinks = [
   {
     label: "LinkedIn",
     href: personalInfo.linkedin,
-    icon: UserCircle,
+    icon: Link,
   },
   {
     label: "Email",
