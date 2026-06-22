@@ -23,7 +23,7 @@ function StatCounter({ value, suffix, label }: { value: number; suffix: string; 
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6">
+    <section id="about" className="py-24 px-6 scroll-mt-20">
       <div className="max-w-6xl mx-auto">
         {/* Section label */}
         <FadeInWhenVisible>

@@ -70,7 +70,7 @@ export default function Projects() {
   const showPlaceholders = projects.length === 0
 
   return (
-    <section id="projects" className="py-24 px-6 bg-[#111118]/50">
+    <section id="projects" className="py-24 px-6 bg-[#111118]/50 scroll-mt-20">
       <div className="max-w-6xl mx-auto">
         <FadeInWhenVisible>
           <p className="font-mono text-xs text-violet-500 mb-2 tracking-widest uppercase">

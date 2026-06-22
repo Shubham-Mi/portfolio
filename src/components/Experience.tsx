@@ -5,7 +5,7 @@ import { MapPin } from "lucide-react"
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 px-6">
+    <section id="experience" className="py-24 px-6 scroll-mt-20">
       <div className="max-w-6xl mx-auto">
         <FadeInWhenVisible>
           <p className="font-mono text-xs text-violet-500 mb-2 tracking-widest uppercase">

@@ -23,7 +23,7 @@ const socialLinks = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-32 px-6">
+    <section id="contact" className="py-32 px-6 scroll-mt-20">
       <div className="max-w-2xl mx-auto text-center">
         <FadeInWhenVisible>
           <p className="font-mono text-xs text-violet-500 mb-2 tracking-widest uppercase">

@@ -31,7 +31,7 @@ function SkillCategory({ category, skills, index }: { category: string; skills: 
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 bg-[#111118]/50">
+    <section id="skills" className="py-24 px-6 bg-[#111118]/50 scroll-mt-20">
       <div className="max-w-6xl mx-auto">
         <FadeInWhenVisible>
           <p className="font-mono text-xs text-violet-500 mb-2 tracking-widest uppercase">
