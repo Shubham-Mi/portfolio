@@ -27,10 +27,9 @@ export default function ProjectsPage() {
             <p className="font-mono text-xs text-violet-500 mb-2 tracking-widest uppercase">
               // projects
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-100 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-100 mb-16">
               Things I&apos;ve built
             </h2>
-            <div className="mb-16" />
           </FadeInWhenVisible>
 
           {projects.length === 0 ? (

@@ -27,7 +27,7 @@ export default function Projects() {
           <p className="font-mono text-xs text-violet-500 mb-2 tracking-widest uppercase">
             // 04 projects
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-100 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-100 mb-16">
             Things I&apos;ve built
           </h2>
           {showPlaceholders && (
@@ -35,7 +35,6 @@ export default function Projects() {
               Projects loading in — check back soon.
             </p>
           )}
-          {!showPlaceholders && <div className="mb-16" />}
         </FadeInWhenVisible>
 
         <div className="grid sm:grid-cols-2 gap-6">
@@ -52,16 +51,18 @@ export default function Projects() {
               ))}
         </div>
 
-        <FadeInWhenVisible>
-          <div className="mt-12 text-center">
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 text-sm font-mono text-violet-400 hover:text-violet-300 transition-colors border border-violet-500/30 hover:border-violet-500/60 px-5 py-2.5 rounded-lg hover:bg-violet-500/5"
-            >
-              View all projects →
-            </Link>
-          </div>
-        </FadeInWhenVisible>
+        {!showPlaceholders && (
+          <FadeInWhenVisible>
+            <div className="mt-12 text-center">
+              <Link
+                href="/projects"
+                className="inline-flex items-center gap-2 text-sm font-mono text-violet-400 hover:text-violet-300 transition-colors border border-violet-500/30 hover:border-violet-500/60 px-5 py-2.5 rounded-lg hover:bg-violet-500/5"
+              >
+                View all projects →
+              </Link>
+            </div>
+          </FadeInWhenVisible>
+        )}
       </div>
     </section>
   )
