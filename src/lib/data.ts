@@ -116,4 +116,17 @@ export const experiences: Experience[] = [
 	},
 ];
 
+/**
+ * Sample Project
+{
+  name: "Base Convertor",
+  description: "Convert numbers between binary, octal, decimal, and hexadecimal with instant results.",
+  tags: ["React", "TypeScript", "Vite", "Vercel"],
+  featured: true,
+  slug: "base-convertor",
+  deploymentUrl: "https://base-convertor-one.vercel.app",
+  github: "https://github.com/Shubham-Mi/base-convertor",
+}
+ */
+
 export const projects: Project[] = [];
