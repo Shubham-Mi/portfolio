@@ -1,7 +1,8 @@
 "use client"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { GitFork, ExternalLink } from "lucide-react"
+import { ExternalLink } from "lucide-react"
+import { FaGithub } from "react-icons/fa"
 import type { Project } from "@/lib/data"
 
 function Thumbnail({ src, name }: { src?: string; name: string }) {
@@ -98,11 +99,11 @@ export default function ProjectCard({ project }: { project: Project }) {
                 className="text-slate-500 hover:text-violet-400 transition-colors"
                 aria-label="GitHub"
               >
-                <GitFork size={16} />
+                <FaGithub size={16} />
               </a>
             ) : (
               <span className="text-slate-700 cursor-not-allowed" aria-label="No GitHub link">
-                <GitFork size={16} />
+                <FaGithub size={16} />
               </span>
             )}
             <DeploymentIcon project={project} />
